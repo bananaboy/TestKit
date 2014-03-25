@@ -2,6 +2,8 @@
 
 // These settings shouldn't be changed unless you know what you are doing!
 
+$config['debug'] = false;
+
 $config['db_name'] = 'testkit_db'; // Database name
 
 $config['default_controller'] = 'main'; // Default controller to load

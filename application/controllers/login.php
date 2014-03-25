@@ -15,7 +15,7 @@ class Login extends Controller
         {
             $username = $_POST['username'];
             $password = $_POST['password'];
-            if ($username == $config['admin_username'] && $password == $config['admin_password'])
+            if ($username == $config['admin_username'] && $password == $config['admin_password'] && ($config['admin_password'] != 'testkit' || $config['debug']))
             {
                 // Success! Redirect to main and set the session var.
                 $sh = $this->loadHelper('Session_helper');

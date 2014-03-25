@@ -2,8 +2,8 @@
 
 /*
     TestKit admin login settings.
-    You MUST change the admin username and password! TestKit will not
-    allow you to log in if these have not been changed from the defaults!
+    You MUST change at least the admin password! TestKit will not allow
+    you to log in if the password has not been changed from the default.
 */
 $config['admin_username'] = 'testkit';
 $config['admin_password'] = 'testkit';
@@ -39,5 +39,11 @@ $config['db_password'] = 'password';
 $config['db_host'] = 'localhost';
 
 require(realpath(dirname(__FILE__))."/config_private.php");
+
+$userConfig = realpath(dirname(__FILE__))."/config_user.php";
+if (file_exists($userConfig))
+{
+    require($userConfig);
+}
 
 ?>

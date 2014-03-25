@@ -1,7 +1,13 @@
-# Create the database and user.
+# Create the TestKit user. If you changed the username or password in
+# config.php then they must also be updated here!
+CREATE USER 'testkit'@'%' IDENTIFIED BY 'password';
+
+# Create the database.
 CREATE DATABASE testkit_db;
-CREATE USER 'testkit'@'localhost' IDENTIFIED BY 'testkit';
-GRANT ALL ON testkit_db.* TO 'testkit'@'localhost';
+
+# Grant privileges to the user. If you changed the username in config.php
+# then it must also be updated here.
+GRANT ALL ON testkit_db.* TO 'testkit'@'%';
 FLUSH PRIVILEGES;
 USE testkit_db;
 

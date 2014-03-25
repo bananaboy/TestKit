@@ -26,7 +26,7 @@
                 </p>
                 <br/>
                 <p>
-                    <input type="submit" name="submit" id="submit" value="Login" class="button">
+                    <input type="submit" name="submit" id="submit" value="Login" class="button login">
                 </p>
             </form>
         </div>

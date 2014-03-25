@@ -17,7 +17,7 @@ class Login extends Controller
             $password = $_POST['password'];
             if ($username == $config['admin_username'] && $password == $config['admin_password'])
             {
-                // Success! Redirect to main.
+                // Success! Redirect to main and set the session var.
                 $sh = $this->loadHelper('Session_helper');
                 $sh->set('login', true);
                 $this->redirect('');

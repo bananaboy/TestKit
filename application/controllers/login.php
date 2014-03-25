@@ -1,6 +1,6 @@
 <?php
 
-class Main extends Controller
+class Login extends Controller
 {
     function index()
     {
@@ -9,8 +9,7 @@ class Main extends Controller
         if (!isset($_POST['username']) || !isset($_POST['password']))
         {
             // No login post vars so render the login view.
-            $template = $this->loadView('main_view');
-            $template->render();
+            $this->render();
         }
         else
         {
@@ -23,9 +22,7 @@ class Main extends Controller
             else
             {
                 // Failure, show error message and render login again.
-                $template = $this->loadView('main_view');
-                $template->set('message', 'Invalid username or password!');
-                $template->render();
+                $this->render(array('message' => 'Invalid username or password!'));
             }
         }
     }

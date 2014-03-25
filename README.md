@@ -1,8 +1,17 @@
-#PIP
+#TestKit
 
-PIP is a tiny application framework built for people who use a LAMP stack. PIP aims to be as simple as possible to set up and use.
+TestKit is a small web application designed for mobile developers to aid in distributing test builds. It allows you to:
 
-Visit [http://gilbitron.github.com/PIP](http://gilbitron.github.com/PIP/) for more information and documentation.
+- Add testers
+- Upload builds
+- Assign testers to specific builds
+- Email testers when new builds are available and allow them to install builds
+
+TestKit also automatically handles iOS device UDIDs, so you don't have to explain to users how to find it!
+
+Note that TestKit does not provide any sort of mobile SDK. It does not provide crash or log tracking, symbolication,
+or any other such features. It is designed purely to aid in distributing builds and in particular getting that pesky
+iOS UDID.
 
 ## Requirements
 
@@ -12,16 +21,14 @@ Visit [http://gilbitron.github.com/PIP](http://gilbitron.github.com/PIP/) for mo
 
 ## Installation
 
-* Download PIP and extract
-* Navigate to `application/config/config.php` and fill in your `base_url`
-* You are ready to rock! Point your browser to your `base_url` and hopefully see a welcome message.
-
-## Documentation
-
-Visit [http://gilbitron.github.com/PIP](http://gilbitron.github.com/PIP/) to see the documentation.
+* Download TestKit and extract onto your web server.
+* Open `application/config/config.php` in a text editor and update any settings (most importantly the passwords).
+* If you changed the database username or password then also update them in createDatabase.sql.
+* Run the createDatabase.sql script in phpMyAdmin or from the command-line.
+* The system is ready to go! The login page is at base_url/testkit
 
 ## License
 
-PIP is released under the MIT license.
+TestKit is released under the MIT license.
 
-Want to say thanks? [Consider tipping me](https://www.gittip.com/gilbitron).
+

@@ -1,13 +1,43 @@
 <?php 
 
-$config['base_url'] = 'http://localhost/testkit'; // Base URL including trailing slash (e.g. http://localhost/)
+/*
+    TestKit admin login settings.
+    You MUST change the admin username and password! TestKit will not
+    allow you to log in if these have not been changed from the defaults!
+*/
+$config['admin_username'] = 'testkit';
+$config['admin_password'] = 'testkit';
 
-$config['default_controller'] = 'main'; // Default controller to load
-$config['error_controller'] = 'error'; // Controller used for errors (e.g. 404, 500 etc)
+/*
+    Base URL.
+    This should include a trailing slash (e.g. http://localhost/testkit/)
+*/
+$config['base_url'] = 'http://localhost/testkit/';
 
-$config['db_host'] = 'localhost'; // Database host (e.g. localhost)
-$config['db_name'] = 'testkit_db'; // Database name
-$config['db_username'] = 'testkit@localhost'; // Database username
-$config['db_password'] = 'testkit'; // Database password
+/*
+    MySQL database username.
+    You can use the root login if you like, but it is preferable to create
+    a specific user just for the TestKit database.
+
+    If you change this setting you should also update createDatabase.sql!
+*/
+$config['db_username'] = 'testkit';
+
+/*
+    MySQL database password.
+    You don't have to change the database password if your database is running
+    on localhost, but it is recommended. If not running on localhost you probably
+    should change it!
+
+    If you change this setting you should also update createDatabase.sql!
+*/
+$config['db_password'] = 'password';
+
+/*
+    MySQL database host machine.
+*/
+$config['db_host'] = 'localhost';
+
+require(realpath(dirname(__FILE__))."/config_private.php");
 
 ?>

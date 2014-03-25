@@ -1,1 +1,155 @@
 /* CSS Styles */
+
+body
+{
+    background: #e9e5e2 url(../images/bg.png) repeat;
+}
+
+.title
+{
+    width: 170px;
+    margin-left: auto;
+    margin-right: auto;
+    background: url(../images/logo_small.png) no-repeat left center;
+    padding: 10px 0 8px 76px;
+    margin-top: 150px;
+}
+
+.title h1
+{
+    font-family: "Open Sans", sans-serif;
+    text-shadow: 0px 1px 0px rgba(255, 255, 255, 1);
+    color: #3C3D3D;
+    font-size: 38pt;
+    font-weight: normal;
+}
+
+.login
+{
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    background-color: #f4f3f0;
+    border-radius: 4px;
+    box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.5);
+    border: 2px solid #f8f8f8;
+}
+
+.login form
+{
+    padding: 20px;
+}
+
+.login label
+{
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+.login .text
+{
+    line-height: 1;
+    font-size: 24px;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.07);
+    border-color: #ddd;
+    color: #333;
+    background: #fbfbfb;
+    border-width: 1px;
+    border-style: solid;
+    width: 100%;
+    padding: 4px;
+    margin-top: 8px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    outline: 0;
+}
+
+.login .text:focus
+{
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    border-color: #999;
+}
+
+.login p
+{
+    margin: 0;
+    padding: 0;
+}
+
+.login .button
+{
+    background: #2ea2cc;
+    border-color: #0074a2;
+    box-shadow: inset 0 1px 0 rgba(120, 200, 230, 0.5), 0 1px 0 rgba(0, 0, 0, 0.15);
+    color: #fff;
+    height: 30px;
+    line-height: 28px;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 3px;
+    font-size: 13px;
+    text-decoration: none;
+    padding: 0 12px 2px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+    float: right;
+    margin-bottom: 10px;
+    cursor: pointer;
+    outline: 0;
+}
+
+.login .button:hover
+{
+    background: #1e8cbe;
+    border-color: #0074a2;
+    box-shadow: inset 0 1px 0 rgba(120, 200, 230, 0.6);
+}
+
+.login .button:focus
+{
+    border-color: #0e3950;
+    box-shadow: inset 0 1px 0 rgba(120, 200, 230, 0.6), 1px 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+.login .button:active
+{
+    padding-top: 1px;
+    background: #1e8cbe;
+    border-color: #005684;
+    box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.1);
+    vertical-align: top;
+}
+
+.loginContent
+{
+    margin-left: auto;
+    margin-right: auto;
+    width: 320px;
+}
+
+.msg
+{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 0;
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    background-color: #f4f3f0;
+    border-radius: 4px;
+    box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.5);
+    border: 2px solid #f8f8f8;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #aa3322;
+}

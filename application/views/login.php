@@ -10,7 +10,7 @@
         <?php } ?>
 
         <div class="login">
-            <form method="post" name="login" id="login" action="<?php echo BASE_URL; ?>">
+            <form method="post" name="login" id="login" action="<?php echo BASE_URL; ?>login">
                 <p>
                     <label for="username">Username
                         <br/>

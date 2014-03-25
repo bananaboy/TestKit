@@ -18,6 +18,9 @@ class Login extends Controller
             if ($username == $config['admin_username'] && $password == $config['admin_password'])
             {
                 // Success! Redirect to main.
+                $sh = $this->loadHelper('Session_helper');
+                $sh->set('login', true);
+                $this->redirect('');
             }
             else
             {

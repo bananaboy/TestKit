@@ -71,7 +71,7 @@ class Model {
             $fieldsString = implode(',', $fields);
         }
 
-        $table = get_class($this)."s";
+        $table = strtolower(get_class($this))."s";
         $query = "SELECT $fieldsString FROM $table";
         return $this->query($query);
     }

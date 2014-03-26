@@ -1,3 +1,5 @@
+<!-- main -->
+
 <?php include('header.php'); ?>
 <?php include('menubar.php'); ?>
 

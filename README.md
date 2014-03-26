@@ -25,7 +25,8 @@ iOS UDID.
 * Open `application/config/config.php` in a text editor and update any settings (most importantly the passwords).
 * If you changed the database username or password then also update them in createDatabase.sql.
 * Run the createDatabase.sql script in phpMyAdmin or from the command-line.
-* The system is ready to go! The login page is at base_url/testkit
+* Open `.htaccess` in a text editor and update any settings.
+* The system is ready to go!
 
 ## License
 

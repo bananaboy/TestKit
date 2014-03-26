@@ -160,7 +160,8 @@ body
 
 .logout
 {
-    width: 100%;
+    float: right;
+    margin: 0;
 }
 
 .main
@@ -168,4 +169,79 @@ body
     margin-left: auto;
     margin-right: auto;
     width: 320px;
+}
+
+.menubar
+{
+    overflow: hidden;
+    background-color: #3f3f3f;
+    box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.5);
+    padding: 16px;
+}
+
+.menubar .menubarContainer
+{
+    float: left;
+    height: 32px;
+}
+
+.menubar .logo
+{
+    float: left;
+    background: url(../images/logo32.png) no-repeat left center;
+    height: 32px;
+    padding-right: 12px;
+}
+
+.menubar h1
+{
+    font-family: "Open Sans", sans-serif;
+    text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.2);
+    color: #fff;
+    font-size: 20pt;
+    font-weight: normal;
+    padding-left: 40px;
+}
+
+.vertical-rule
+{
+    width: 0px;
+    height: 40px;
+    border: 1px solid #c8c8c8;
+    box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.5);
+    float: left;
+    margin-top: -6px;
+}
+
+.menu-item
+{
+    line-height: 32px;
+    vertical-align: middle;
+    float: left;
+    color: #fff;
+    font-size: 12pt;
+    font-weight: normal;
+    padding-left: 8px;
+    padding-right: 8px;
+    text-align: center;
+    width: 60px;
+}
+
+.menu-item a
+{
+    display: inline-block;
+    width: 60px;
+    text-decoration: none;
+    color: #ddd;
+    font-family: "Open Sans", sans-serif;
+    text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.2);
+}
+
+.menu-item a:hover
+{
+    color: #2A1B52;
+    background-color: #aaa;
+    border-radius: 4px;
+    box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.5);
+    border: 1px solid #c8c8c8;
 }

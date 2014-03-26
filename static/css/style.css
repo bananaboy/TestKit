@@ -10,7 +10,7 @@ body
     width: 170px;
     margin-left: auto;
     margin-right: auto;
-    background: url(../images/logo_small.png) no-repeat left center;
+    background: url(../images/logo.png) no-repeat left center;
     padding: 10px 0 8px 76px;
     margin-top: 150px;
 }
@@ -108,7 +108,7 @@ body
     outline: 0;
 }
 
-.button .login
+.loginButton
 {
     float: right;
 }

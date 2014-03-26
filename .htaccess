@@ -1,10 +1,35 @@
+#
+# These rules allow routing and human friendly urls! Check out the RewriteBase
+# entry below and make sure it works for your system.
+#
+
 <IfModule mod_rewrite.c>
 RewriteEngine On
+
+#
+# Update the RewriteBase to the relative path where TestKit is installed.
+# For example, if TestKit is installed in:
+#
+#       /home/user/public_html/foo/bar/testkit and
+#
+# that path is accessible via:
+#
+#       http://www.domain.com/~user/foo/bar/testkit, then
+#
+# the RewriteBase would be:
+#
+#       RewriteBase /~user/foo/bar/testkit
+#
 RewriteBase /testkit
+
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d 
 RewriteRule . index.php [L]
 </IfModule>
 
-# Prevent file browsing
-Options -Indexes
+#
+# Prevent file browsing. Enable this to disable file browsing of the TestKit
+# directory structure. This is disabled by default as some hosts do not allow
+# overriding this in .htaccess. Enable it if you can!
+#
+#Options -Indexes

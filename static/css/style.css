@@ -246,19 +246,21 @@ body
     border: 1px solid #c8c8c8;
 }
 
-.testers
+table
 {
     margin-top: 32px;
     margin-left: auto;
     margin-right: auto;
+    width: 70%;
 }
 
-.testers th
+th
 {
-    font-size: 32px;
+    font-size: 24px;
     text-align: left;
 }
 
-.testers td
+td
 {
 }
+

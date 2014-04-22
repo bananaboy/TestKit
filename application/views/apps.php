@@ -1,7 +1,7 @@
 <!-- apps -->
 
 <?php include('header.php'); ?>
-<?php include('menubar.php'); ?>
+<?php include('navbar.php'); ?>
 
     <div class="main">
         <form method="post" name="addapp" id="addapp" action="<?php echo BASE_URL; ?>apps/addremove">

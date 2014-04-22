@@ -2,33 +2,28 @@
 <?php include('header.php'); ?>
 
     <div class="loginContent">
-        <div class="title">
+        <div class="title center-block">
+            <img src="<?= BASE_URL ?>/static/images/logo.png">
             <h1>TestKit</h1>
         </div>
 
         <?php if (isset($message)) { ?>
-        <div class="msg"><?= $message ?></div>
+        <div class="alert alert-danger alert-dismissable login-msg">
+            <button type="button" class="close login-msg-dismiss" data-dismiss="alert" aria-hidden="true">&times;</button>
+            <?= $message ?>
+        </div>
         <?php } ?>
 
         <div class="login">
-            <form method="post" name="login" id="login" action="<?php echo BASE_URL; ?>login">
-                <p>
-                    <label for="username">Username
-                        <br/>
-                        <input id="username" name="username" type="text" class="text" autofocus="autofocus">
-                    </label>
-                </p>
-                <br/>
-                <p>
-                    <label for="password">Password
-                        <br/>
-                        <input id="password" name="password" type="password" class="text">
-                    </label>
-                </p>
-                <br/>
-                <p>
-                    <input type="submit" name="submit" id="submit" value="Login" class="button loginButton">
-                </p>
+            <form role="form" method="post" name="login" id="login" action="<?php echo BASE_URL; ?>login">
+                <div class="form-group">
+                    <input id="username" name="username" type="text" class="form-control" autofocus="autofocus" placeholder="Username">
+                </div>
+                <div class="form-group">
+                    <input id="password" name="password" type="password" class="form-control" placeholder="Password">
+                </div>
+                <!--<input type="submit" name="submit" id="submit" value="Login" class="btn btn-default">-->
+                <button type="submit" name="submit" id="submit" class="btn btn-default tkbutton btn-block">Login</button>
             </form>
         </div>
     </div>

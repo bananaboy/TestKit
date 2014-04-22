@@ -25,6 +25,9 @@ CREATE TABLE tester_devices (id int NOT NULL AUTO_INCREMENT PRIMARY KEY, tester_
 # apps table stores all applications.
 CREATE TABLE apps (id int NOT NULL AUTO_INCREMENT PRIMARY KEY, name varchar(255) NOT NULL, last_updated date, latest_build int REFERENCES builds(id));
 
+# tester_apps stores all apps that testers are assigned to.
+CREATE TABLE tester_apps (id int NOT NULL AUTO_INCREMENT PRIMARY KEY, tester_id int NOT NULL REFERENCES testers(id), app_id int NOT NULL REFERENCES apps(id));
+
 # builds table stores all build versions.
 CREATE TABLE builds (id int NOT NULL AUTO_INCREMENT PRIMARY KEY, version varchar(255) NOT NULL, app_id int NOT NULL REFERENCES apps(id), filename varchar(255) NOT NULL);
 

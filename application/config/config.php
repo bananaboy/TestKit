@@ -1,5 +1,9 @@
 <?php 
 
+$config['email_from'] = 'sam@horsedrawngames.com';
+$config['email_company_name'] = 'Horse Drawn Games';
+$config['email_contact_name'] = 'Sam Izzo';
+
 /*
     TestKit admin login settings.
     You MUST change at least the admin password! TestKit will not allow

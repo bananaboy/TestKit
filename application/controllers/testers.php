@@ -79,8 +79,27 @@ class Testers extends Controller
         $this->model->delete('id', $selectedIds);
     }
 
-    private function sendInvites($ph)
+    private function sendInvites($selectedIds)
     {
+        global $config;
+        $template = $this->loadView("email_invite");
+        $template->set(array('url' => 'http://www', 'config' => $config));
+
+        $message = $template->renderIntoString();
+
+        $subject = 'Welcome to the '.$config['email_company_name'].' beta program!';
+
+        $headers = "From: ".$config['email_contact_name']."<".$config['email_from'].">\r\n";
+        $headers .= "Reply-To: ".$config['email_from']."\r\n";
+        $headers .= "MIME-Version: 1.0\r\n";
+        $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
+
+        $testers = $this->model->find(array('id' => $selectedIds));
+        foreach ($testers as $key => $value)
+        {
+            $to = $value->first_name." ".$value->last_name." <".$value->email.">";
+            mail($to, $subject, $message, $headers, "-f".$config['email_from']);
+        }
     }
 }
 

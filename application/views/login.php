@@ -22,7 +22,6 @@
                 <div class="form-group">
                     <input id="password" name="password" type="password" class="form-control" placeholder="Password">
                 </div>
-                <!--<input type="submit" name="submit" id="submit" value="Login" class="btn btn-default">-->
                 <button type="submit" name="submit" id="submit" class="btn btn-default tkbutton btn-block">Login</button>
             </form>
         </div>

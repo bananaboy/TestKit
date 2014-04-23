@@ -16,6 +16,11 @@ class Post_helper
     {
         return isset($_POST["$key"]) && !is_null($_POST["$key"]);
     }
+
+    public function hasStringValue($key)
+    {
+        return $this->hasValue($key) && strlen($this->get($key)) > 0;
+    }
 }
 
 ?>

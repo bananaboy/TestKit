@@ -18,21 +18,25 @@ class Testers extends Controller
             // Add a new tester.
             $this->add($ph);
         }
-        else if ($ph->hasValue('tester-action') && strlen($ph->get('tester-action')) > 0)
+        else if ($ph->hasStringValue('tester-action'))
         {
             $action = $ph->get('tester-action');
-            switch ($action)
+            $selectedIds = $this->getSelectedIds($ph);
+            if (count($selectedIds) > 0)
             {
-                case 'tester-action-send-invites':
+                switch ($action)
                 {
-                    $this->sendInvites($ph);
-                    break;
-                }
+                    case 'tester-action-send-invites':
+                    {
+                        $this->sendInvites($selectedIds);
+                        break;
+                    }
 
-                case 'tester-action-remove-testers':
-                {
-                    $this->remove($ph);
-                    break;
+                    case 'tester-action-remove-testers':
+                    {
+                        $this->remove($selectedIds);
+                        break;
+                    }
                 }
             }
         }
@@ -43,9 +47,9 @@ class Testers extends Controller
 
     private function add($ph)
     {
-        if ($ph->hasValue('tester-email') && strlen($ph->get('tester-email')) > 0 &&
-            $ph->hasValue('tester-first-name') && strlen($ph->get('tester-first-name')) > 0 &&
-            $ph->hasValue('tester-last-name') && strlen($ph->get('tester-last-name')) > 0)
+        if ($ph->hasStringValue('tester-email') &&
+            $ph->hasStringValue('tester-first-name') &&
+            $ph->hasStringValue('tester-last-name'))
         {
             $email = $ph->get('tester-email');
             $firstName = $ph->get('tester-first-name');
@@ -57,15 +61,26 @@ class Testers extends Controller
         }
     }
 
-    private function remove($ph)
+    private function getSelectedIds($ph)
     {
-        if ($ph->hasValue('tester-select'))
+        $ids = array();
+
+        if ($ph->hasValue('tester-select') && is_array($ph->get('tester-select')))
         {
-            $toRemove = $ph->get('tester-select');
-            error_log(print_r($toRemove, true));
-            $toRemove = array_keys($toRemove);
-            $this->model->delete('id', $toRemove);
+            $ids = $ph->get('tester-select');
+            $ids = array_keys($ids);
         }
+
+        return $ids;
+    }
+
+    private function remove($selectedIds)
+    {
+        $this->model->delete('id', $selectedIds);
+    }
+
+    private function sendInvites($ph)
+    {
     }
 }
 

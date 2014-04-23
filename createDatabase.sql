@@ -14,7 +14,7 @@ FLUSH PRIVILEGES;
 USE testkit_db;
 
 # testers table.
-CREATE TABLE testers (id int NOT NULL AUTO_INCREMENT PRIMARY KEY, email varchar(255) NOT NULL);
+CREATE TABLE testers (id int NOT NULL AUTO_INCREMENT PRIMARY KEY, email varchar(255) NOT NULL, first_name varchar(255) NOT NULL, last_name varchar(255) NOT NULL);
 
 # devices table stores known device types.
 CREATE TABLE devices (id int NOT NULL AUTO_INCREMENT PRIMARY KEY, os_type enum('ios', 'android') NOT NULL, model varchar(255) NOT NULL);

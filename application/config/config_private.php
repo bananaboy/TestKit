@@ -22,4 +22,6 @@ function isLoggedIn()
 
 $config['pre_route_handler'] = 'isLoggedIn';
 
+require(realpath(dirname(__FILE__))."/../../system/globals.php");
+
 ?>

@@ -10,9 +10,9 @@ RewriteEngine On
 # Update the RewriteBase to the relative path where TestKit is installed.
 # For example, if TestKit is installed in:
 #
-#       /home/user/public_html/foo/bar/testkit and
+#       /home/user/public_html/foo/bar/testkit
 #
-# that path is accessible via:
+# and that path is accessible via:
 #
 #       http://www.domain.com/~user/foo/bar/testkit, then
 #

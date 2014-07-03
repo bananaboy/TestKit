@@ -11,11 +11,10 @@
     <meta name="author" content="">
 
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="<?= BOOTSTRAP_URL ?>/css/bootstrap.min.css">
+    <link rel="stylesheet" href="<?= BOOTSTRAP_URL ?>/css/bootstrap-theme.min.css">
 
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
-
-    <link rel="stylesheet" href="<?php echo BASE_URL; ?>static/css/style.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="<?= BASE_URL; ?>static/css/style.css" type="text/css" media="screen" />
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -25,5 +24,5 @@
     <![endif]-->
 </head>
 <body>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="<?= JQUERY_URL ?>/jquery.min.js"></script>
+    <script src="<?= BOOTSTRAP_URL ?>/js/bootstrap.min.js"></script>
